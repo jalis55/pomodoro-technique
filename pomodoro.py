@@ -16,9 +16,14 @@ def countdown(t,status,beep=False):
         t -= 1
 
 def main():
-    t=8
-    while t:
+    total_working_hour=int(input("Enter total hours to work:"))
+    total_working_hour=total_working_hour*3600
+    current_time=time.time()
+    current_time=current_time+total_working_hour
+    curr=time.ctime(current_time)
+    print("Work will finish at:",curr)
+    while total_working_hour:
         countdown(1500,'Please Work till:')
         countdown(180,'Please take rest till:',beep=True)
-        t=t-1
+        t=t-(1500+180)
 main()
