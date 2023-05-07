@@ -28,16 +28,15 @@ def promodoro():
         winsound.PlaySound('beep-24.wav', winsound.SND_FILENAME)
     voice_message("Please start working for next twenty five minutes")
     close_image()
-    # time.sleep(1500)
-    time.sleep(10)
+    time.sleep(1500)
 
     show_image('rest.jpg')
     for _ in range(5):
          winsound.PlaySound('beep-30b.wav', winsound.SND_FILENAME)
     voice_message("Please take three minutes rest")
     close_image()
-    # time.sleep(170)
-    time.sleep(10)
+    time.sleep(170)
+    
 
 def main():
     total_working_time=int(input("Enter total working hour:"))*60
