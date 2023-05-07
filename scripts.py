@@ -39,8 +39,8 @@ def promodoro():
     
 
 def main():
-    total_working_time=int(input("Enter total working hour:"))*60
-    total_interval=m.ceil(total_working_time/25)
+    total_working_time=float(input("Enter total working hour:"))
+    total_interval=m.ceil((total_working_time*60)/25)
     for _ in range(total_interval):
         promodoro()
     
